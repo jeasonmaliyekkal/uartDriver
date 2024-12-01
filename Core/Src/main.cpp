@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "led.h"
+#include "uart.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -75,6 +76,7 @@ int main(void)
 
   /* USER CODE BEGIN Init */
   LEDInit();
+  uartTransmitInit();
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -99,6 +101,7 @@ int main(void)
     LEDOff();
     for(int i =0; i< 90000; i++){}
     /* USER CODE BEGIN 3 */
+    printf("Hello from STM32.....\n\r");
   }
   /* USER CODE END 3 */
 }

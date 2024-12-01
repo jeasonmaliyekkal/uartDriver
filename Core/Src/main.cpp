@@ -17,6 +17,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <iostream>
 #include "main.h"
 #include "led.h"
 #include "uart.h"
@@ -101,7 +102,7 @@ int main(void)
     LEDOff();
     for(int i =0; i< 90000; i++){}
     /* USER CODE BEGIN 3 */
-    printf("Hello from STM32.....\n\r");
+    std::cout << ("Hello from STM32.....\n\r");
   }
   /* USER CODE END 3 */
 }

@@ -20,10 +20,13 @@ static uint32_t computeUartBaudrate(uint32_t &peripheralClock, uint32_t &baudrat
 static void uartWrite(int character);
 
 // Remapping printf
-PUTCHAR_PROTOTYPE
+extern "C"
 {
-    uartWrite(ch);
-    return ch;
+    PUTCHAR_PROTOTYPE
+    {
+        uartWrite(ch);
+        return ch;
+    }
 }
 
 void uartTransmitInit(void)
